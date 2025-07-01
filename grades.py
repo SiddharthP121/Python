@@ -1,3 +1,6 @@
+# Write a programe to find out the grade as per the percentage
+
+
 
 PERCENTAGES = float(input("Enter the percentage: \n"))
 
