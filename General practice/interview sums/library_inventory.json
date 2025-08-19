@@ -1,0 +1,8 @@
+{
+ "books": [
+ {"title": "Learning Python", "author": "Mark Lutz", "available": true},
+ {"title": "Django for Beginners", "author": "William S. Vincent", "available": false},
+ {"title": "Automate the Boring Stuff with Python", "author": "Al Sweigart",
+ "available": true}
+ ]
+ }
