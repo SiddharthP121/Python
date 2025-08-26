@@ -37,25 +37,25 @@ MRO (Method Resolution Order).
 '''
 
 class Person:
-    def __init__(self, name):
+    def __init__(self, name, **kwargs):
+        super().__init__(**kwargs) #optional where the parent class is <object>
         self.name = name
     
 class Employee(Person):
-    def __init__(self, name, salary):
-        Person.__init__(self, name)
+    def __init__(self, salary, **kwargs):
+        super().__init__(**kwargs)
         self.salary = salary
    
 
 class Student(Person):
-    def __init__(self, name, roll_no):
-        Person.__init__(self, name)
+    def __init__(self, roll_no, **kwargs):
+        super().__init__(**kwargs)
         self.roll_no = roll_no
     
 
 class Research_scholer(Student, Employee):
-    def __init__(self, name, roll_no, salary, field):
-        Student.__init__(self, name, roll_no)
-        Employee.__init__(self, name, salary)
+    def __init__(self, name, roll_no, salary, field, **kwargs):
+        super().__init__(name = name, roll_no = roll_no, salary = salary)
         self.field = field
     def show_details(self):
         print(
